@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.say.mapper.MemberMapper">
+<insert id="memberJoin" > 
+insert into sr_member (memberId, memberPw, adminCk, regDate)
+VALUES (#{memberId, jdbcType=VARCHAR}, #{memberPw, jdbcType=VARCHAR}, 0, SYSDATE)
+
+</insert>
+
+<select id="memberLogin" resultType="com.say.model.MemberVO">
+
+select memberId, memberPw, adminCk from sr_member where memberId = #{memberId} 
+
+<!-- select memberId, memberPw, adminCk from sr_member where memberId = 
+#{memberId} and memberPw = #{memberPw} -->
+
+</select>
+
+
+</mapper>
