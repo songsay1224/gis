@@ -20,7 +20,7 @@ body {
     margin: 0;
     display: flex; /* 부모 요소에 flexbox 설정 */
     height: 100vh; /* 화면 전체 높이 사용 */
-    flex-direction: row-reverse;
+    flex-direction: row-reverse;r
 }
 
 #map {
@@ -59,6 +59,7 @@ input {
     font-size: 16px; /* 글자 크기 */
     border: 2px solid #4CAF50; /* 연한 초록색 테두리 */
     border-radius: 5px; /* 모서리를 둥글게 설정 */
+    background-color : #f4f4f4;
     
    
    
